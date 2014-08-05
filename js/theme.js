@@ -5,6 +5,8 @@ var windowWidth = jQuery(window).width();
 var navHeight = jQuery('header.navbar').height();
 function saveCart(){
 	$("#secplay").removeClass("col-sm-offset-2");
+	$("#carrito").hide();
+	$("#secpagar").removeClass("col-sm-4").addClass("col-sm-8");
 	$("#secpagar").show();
 }
 function dicemimamaquesiempreno(){
@@ -118,10 +120,15 @@ var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
+	
 	if(animating) return false;
 	animating = true;
 	
 	current_fs = $(this).parent();
+	var field = current_fs.attr("id");
+	if (field=='personal-data') { console.log("validar personal-data");}
+	if (field=='shipping-details') { console.log("validar shipping-details");}
+
 	next_fs = $(this).parent().next();
 	
 	//activate next step on progressbar using the index of next_fs
@@ -188,6 +195,7 @@ $(".previous").click(function(){
 });
 
 $(".submit").click(function(){
+	console.log("validar payment");
 	return false;
 })	
 	/*=================================================================

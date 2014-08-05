@@ -1113,9 +1113,7 @@
             <a class="btn btn-default item_add" href="javascript:;">Agregar al carrito</a>
           </form>          
 					</div>
-					<div class="col-sm-4" data-animated="fadeInUp">
-
-
+					<div id="carrito" class="col-sm-4" data-animated="fadeInUp">
 						<h3>Mi Carrito</h3>
 						<div class="simpleCart_items"></div>
 
@@ -1140,7 +1138,7 @@
 								<li>Pagar</li>
 							</ul>
 							<!-- fieldsets -->
-							<fieldset>
+							<fieldset id="personal-data">
 								<h2 class="fs-title">Datos Personales</h2>
 								
 								<input type="text" name="nombre" placeholder="nombre" />
@@ -1149,7 +1147,7 @@
 								<input type="text" name="telefono" placeholder="telefono" />
 								<input type="button" name="next" class="next action-button" value="siguiente" />
 							</fieldset>
-							<fieldset>
+							<fieldset id="shipping-details">
 								<h2 class="fs-title">Datos de envío</h2>
 								
 								<input type="text" name="direccion" placeholder="Calle, # y colonia" />
@@ -1158,7 +1156,7 @@
 								<input type="button" name="previous" class="previous action-button" value="anterior" />
 								<input type="button" name="next" class="next action-button" value="siguiente" />
 							</fieldset>
-							<fieldset>
+							<fieldset id="payment">
 								<h2 class="fs-title">Pagar</h2>
 								
 								<input type="text" name="tarjeta" placeholder="No. Tarjeta" />
@@ -1288,6 +1286,7 @@
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
 	<script type="text/javascript" src="js/skrollr.ie.min.js"></script>
 	<script type="text/javascript" src="js/jquery.zoom.min.js"></script>
+
 	<script type="text/javascript" src="js/theme.js"></script>
 	<!-- end jQuery -->
 </body>
